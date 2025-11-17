@@ -11,8 +11,8 @@ To get a local copy up and running follow these steps.
 1. Clone the repository:
 
 ```bash
-git clone <repo-link>
-cd <repo-folder>
+git clone git@github.com:DimitarGeorgievski/TodoApi-SpringBoot.git
+cd TodoApi-SpringBoot
 ```
 2. Start the application:
 

@@ -1,6 +1,3 @@
--- init.sql
-
--- Табела за корисници
 CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(255) NOT NULL,
@@ -10,8 +7,6 @@ CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
-
--- Trigger за автоматско ажурирање на updated_at
 CREATE OR REPLACE FUNCTION update_updated_at_column()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -24,8 +19,6 @@ CREATE TRIGGER update_users_updated_at
 BEFORE UPDATE ON users
 FOR EACH ROW
 EXECUTE FUNCTION update_updated_at_column();
-
--- Табела за todos
 CREATE TABLE IF NOT EXISTS todos (
     id SERIAL PRIMARY KEY,
     user_id INT NOT NULL,
@@ -39,8 +32,6 @@ CREATE TABLE IF NOT EXISTS todos (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
-
--- Trigger за todos
 CREATE TRIGGER update_todos_updated_at
 BEFORE UPDATE ON todos
 FOR EACH ROW

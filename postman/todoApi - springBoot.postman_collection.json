@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "92ecc4a0-8178-45b8-9c4e-ce54b18e07f1",
+		"name": "todoApi - springBoot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43062782"
+	},
+	"item": [
+		{
+			"name": "Todos",
+			"item": [
+				{
+					"name": "Get All Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{JavaUrl}}/api/todos",
+							"host": [
+								"{{JavaUrl}}"
+							],
+							"path": [
+								"api",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Todos by User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{JavaUrl}}/api/todos/user/2",
+							"host": [
+								"{{JavaUrl}}"
+							],
+							"path": [
+								"api",
+								"todos",
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{JavaUrl}}/api/todos/1",
+							"host": [
+								"{{JavaUrl}}"
+							],
+							"path": [
+								"api",
+								"todos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Buy Bread\",\r\n  \"description\": \"From store\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{JavaUrl}}/api/todos/1",
+							"host": [
+								"{{JavaUrl}}"
+							],
+							"path": [
+								"api",
+								"todos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Todo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Buy coca cola\",\r\n  \"description\": \"From store\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{JavaUrl}}/api/todos/3",
+							"host": [
+								"{{JavaUrl}}"
+							],
+							"path": [
+								"api",
+								"todos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Buy Bread\",\r\n  \"description\": \"From store\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{JavaUrl}}/api/todos/2",
+							"host": [
+								"{{JavaUrl}}"
+							],
+							"path": [
+								"api",
+								"todos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{JavaUrl}}/api/users",
+							"host": [
+								"{{JavaUrl}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{JavaUrl}}/api/users/1",
+							"host": [
+								"{{JavaUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Users Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{JavaUrl}}/api/users",
+							"host": [
+								"{{JavaUrl}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Dimitar\",\r\n  \"lastName\": \"Georgievski\",\r\n  \"password\": \"test1234\",\r\n  \"email\": \"dimitar@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{JavaUrl}}/api/users/1",
+							"host": [
+								"{{JavaUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Dimitar\",\r\n  \"lastName\": \"Georgievski\",\r\n  \"password\": \"test1234\",\r\n  \"email\": \"dimitar@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{JavaUrl}}/api/users",
+							"host": [
+								"{{JavaUrl}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

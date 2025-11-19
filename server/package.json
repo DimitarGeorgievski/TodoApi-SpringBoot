@@ -1,0 +1,16 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "Starter for Todo App with Spring Boot and Postgres Docker",
+  "scripts": {
+    "start": "docker-compose up --build",
+    "stop": "docker-compose down",
+    "restart": "docker-compose down && docker-compose up --build",
+    "logs": "docker-compose logs -f",
+    "ps": "docker-compose ps"
+  },
+  "author": "Dimitar Georgievski",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

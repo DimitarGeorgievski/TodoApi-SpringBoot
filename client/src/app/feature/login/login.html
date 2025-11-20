@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <h2>Login</h2>
+    <div class="form-group">
+      <label for="login-email">Email</label>
+      <input
+        type="text"
+        ngModel
+        name="loginEmail"
+        class="form-control"
+        id="login-email"
+        autocomplete="off"
+        required=""
+        #loginEmail="ngModel"
+      />
+    </div>
+    @if (loginEmail.invalid && loginEmail.touched) {
+    <p class="help-block">Email is required</p>
+    }
+    <div class="form-group">
+      <label for="login-password">Password</label>
+      <input
+        type="password"
+        ngModel
+        name="loginPassword"
+        class="form-control"
+        id="login-password"
+        autocomplete="off"
+        required=""
+        #loginPassword="ngModel"
+      />
+    </div>
+    @if (loginPassword.invalid && loginPassword.touched) {
+    <p class="help-block">Password is required</p>
+    }
+    <button class="btn" type="submit">Login</button>
+  </form>
+</div>
